@@ -1,11 +1,11 @@
-package com.hjs.microserver.entity;
-
-import java.io.Serializable;
+package com.hjs.microserver.entity.vo;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -16,16 +16,11 @@ import lombok.experimental.Accessors;
  * @since 2020-05-02
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-public class SysUser implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class SysUserVO implements Serializable {
 
     /**
      * 人员account
      */
-    @TableId
     private String userAccount;
 
     /**
