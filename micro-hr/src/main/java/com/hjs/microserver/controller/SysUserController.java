@@ -22,7 +22,7 @@ import java.util.List;
  * @since 2020-04-10
  */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/hr/user")
 public class SysUserController extends BaseController {
 
     @Autowired
