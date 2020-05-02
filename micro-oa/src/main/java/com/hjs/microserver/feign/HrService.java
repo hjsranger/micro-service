@@ -20,7 +20,7 @@ public class HrService {
      * 获取所有用户
      * @return
      */
-    List<SysUserVO> listUsers(){
+    public List<SysUserVO> listUsers(){
         JsonResult<List<SysUserVO>> result = hrUserClient.listUsers();
         if(result.isSuccess()){
             return result.getData();
@@ -33,7 +33,7 @@ public class HrService {
      * @param account
      * @return
      */
-    SysUserVO queryById(String account){
+    public SysUserVO queryById(String account){
         JsonResult<SysUserVO> result = hrUserClient.queryById(account);
         if(result.isSuccess()){
             return result.getData();

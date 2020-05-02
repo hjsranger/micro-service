@@ -32,7 +32,19 @@ public class LeaveController extends BaseController {
      */
     @PostMapping("/submit")
     public JsonResult submit(@RequestBody LeaveInfo leaveInfo) {
-        return null;
+        leaveInfoService.saveSubmit(leaveInfo);
+        return returnSuccessJson();
+    }
+
+
+    /**
+     * 查询所有的请假申请
+     * @return
+     */
+    @GetMapping("/queryAll")
+    public JsonResult queryAll(){
+        List list = leaveInfoService.listAllLeaveInfo();
+        return wrapperJsonResult(list);
     }
 
 }

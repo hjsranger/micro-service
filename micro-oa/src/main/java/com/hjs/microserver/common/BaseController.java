@@ -56,7 +56,7 @@ public class BaseController {
     }
 
     public JsonResult returnSuccessJson() {
-        JsonResult jsonResult = new JsonResult();
+        JsonResult jsonResult = new JsonResult(ResultCode.SUCCESS);
         return jsonResult;
     }
 

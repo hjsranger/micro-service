@@ -1,9 +1,11 @@
 package com.hjs.microserver.entity;
 
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -33,6 +35,8 @@ public class LeaveInfo implements Serializable {
      * 请假人
      */
     private String userAccount;
+    @TableField(exist = false)
+    private String userName;
 
     /**
      * 请假天数
@@ -49,6 +53,9 @@ public class LeaveInfo implements Serializable {
      */
     private String approveUser;
 
+    @TableField(exist = false)
+    private String approveUserName;
+
     /**
      * 请假状态，1审批中 2审批完成 3审批拒绝
      */
@@ -57,7 +64,8 @@ public class LeaveInfo implements Serializable {
     /**
      * 请假时间
      */
-    private LocalDateTime createDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date createDate;
 
 
 }
