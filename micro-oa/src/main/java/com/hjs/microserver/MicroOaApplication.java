@@ -4,14 +4,16 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @MapperScan("com.hjs.microserver.mapper")
 @EnableDiscoveryClient
-public class MicroHrApplication {
+@EnableFeignClients
+public class MicroOaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroHrApplication.class, args);
+        SpringApplication.run(MicroOaApplication.class, args);
     }
 
 }

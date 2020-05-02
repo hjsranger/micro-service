@@ -8,6 +8,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.177.100:8761/eureka/
+
+feign:
+  httpclient:
+    connection-timeout: 5000
+
 spring:
   application:
     name: micro-oa
@@ -39,3 +44,5 @@ spring:
 logging:
   level:
     root: info
+
+
