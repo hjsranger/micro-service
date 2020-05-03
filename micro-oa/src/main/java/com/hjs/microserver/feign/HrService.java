@@ -26,7 +26,7 @@ public class HrService {
             return result.getData();
         }
         return null;
-    };
+    }
 
     /**
      * 根据Id查询用户信息
@@ -39,6 +39,6 @@ public class HrService {
             return result.getData();
         }
         return null;
-    };
+    }
 
 }
